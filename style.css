@@ -13,7 +13,6 @@ font-face{
     --header-bg: #88AEB6;
 
     --section-separator-bg: #f0faf7;
-
 }
 
 svg *[stroke] {
@@ -61,6 +60,13 @@ body {
     transition: .2s all;
     background-color: var(--color-main-light);
     color: var(--color-main-dark);
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 15px 64px 22px;
+        width: auto;
+    }
 }
 
 .button:hover {
@@ -202,7 +208,7 @@ body {
 }
 
 .introduction__title {
-    width: 330px;
+    max-width: 330px;
     font-weight: 700;
     font-size: clamp(30px ,3.82vw,55px);
     line-height: 109%;
@@ -330,9 +336,9 @@ body {
         margin-bottom: 10px;
     }
 
-    .strategy__wrapper
+    .strategy__wrapper,
     .shop__wrapper {
-        padding-top: 60px;
+        padding-top: 40px;
     }
 }
 
@@ -673,8 +679,8 @@ body {
 @media (max-width: 768px) {
     .state__wrapper,
     .availability__wrapper {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 
@@ -848,4 +854,42 @@ body {
     font-size: clamp(15px,1.39vw ,20px);
     line-height: 150%;
     text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .more__wrapper {
+        padding: 40px 16px;
+    }
+}
+
+.footer {
+    background-image: url('./assets/images/footer/footer-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 180px 115px;
+}
+
+.footer__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.footer__title {
+    margin-bottom: 30px;
+    color: var(--color-main-light);
+    font-weight: 400;
+    font-size: clamp(30px ,3.82vw,55px);
+    line-height: 109%;
+}
+
+.footer__button {
+    width: auto;
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        padding: 40px 16px;
+    }
 }
